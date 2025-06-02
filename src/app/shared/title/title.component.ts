@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { booleanAttribute, ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-title',
@@ -6,4 +6,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './title.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TitleComponent { }
+export class TitleComponent {
+
+  @Input({ required: true })
+  public title!: string;
+
+  @Input({ transform: booleanAttribute }) withShadow: boolean = false
+
+}
