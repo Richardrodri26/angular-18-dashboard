@@ -4,8 +4,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
+      "@services/*": ["./src/app/services/*"],
+      "@shared/*": ["./src/app/shared/*"],
       "@app/*": ["./src/app/*"],
-      "@shared/*": ["./src/app/shared/*"]
     },
     "strict": true,
     "noImplicitOverride": true,
